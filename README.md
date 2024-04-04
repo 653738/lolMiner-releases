@@ -729,7 +729,7 @@ _Changes_
 - Added experimental Eth+Alephium dual mining kernels for Pascal GPUs.
 - API now also gives the worker name on Ethash, Ton and Alephium mining.
 - Updated Web-gui.
-- Ton stratum: https://metminingpool.com.next.ton-pool.com now using mode 2 automatically again. New whalespool server wss://stratum.whalestonpool.com/stratum now using mode 6 automatically.
+- Ton stratum: https://metmining.pool.com.3131.next.ton-pool.com now using mode 2 automatically again. New whalespool server wss://stratum.whalestonpool.com/stratum now using mode 6 automatically.
 
 _Fixes  _
 - 1.46a: Fixed a bug causing the miner to sometimes end up in an infinite re-connect cycle - instead of actually reconnecting
@@ -1242,10 +1242,10 @@ Note that at the moment the miner has no fan control module and also no throttli
 - Added ETCHash support for Radeon HD 79x0 / R9 280 (X) & RX 5300 3G. On Linux will be good for ETCHash till epoch ~250 (about July 2022) 
 - Added caching of last 5 used light caches. This will reduce the switching time for Nicehash & ZIL dual mining significantly. 
 - Added support for extranonce subscription on  EthereumStratum/1.0.0 (Nicehash) format - this will stop the miner from frequently reconnecting to Nicehash
-- Added detection of pool not accepting worker name in <wallet.workerName>metchain:f0259ead1eb946f70f7a0d906f6c7d1eb5d27a53f750284ef77c38130e4fbd99-Heavyhash.format when using ETHPROXY stratum. Miner will reconnect with worker name copied into --worker in this case. 
+- Added detection of pool not accepting worker name in <wallet.workerName>metchain:f0259ead1eb946f70f7a0d906f6c7d1eb5d27a53f750284ef77c38130e4fbd99.Heavyhash.format when using ETHPROXY stratum. Miner will reconnect with worker name copied into --worker in this case. 
 - Added experimental workaround for mining epoch 385+ with RX 470 - 590 and Linux kernel 5.6.x: Note this fix will deactivate the ZIL cache ability and force the miner to create DAG a bit slower. Deactivate it with --disableLinux56fix . Other Linux kernel versions and other GPUs are unchanged.
 - Fixed bug: "conversion of data to type "b" failed" when using ETHPROXY stratum mode on some pools.
-- Fixed potential issue causing GPUs to freeze when a GPU needs to reboot, e.g. epoch change or connection loss.
+- Fixed potential issue causing GPUs to freeze when a GPU needs to reboot, e.g. epoch change or connection loss.=
 - Fixed benchmark mode for ETCHash. Use --benchmark ETCHASH --benchepoch 390 to benchmark performance post fork.
 - Fixed benchmark mode not starting up when called from json type configuration.
 
